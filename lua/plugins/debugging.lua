@@ -26,21 +26,4 @@ return {
 			vim.keymap.set("n", "<Leader>dc", dap.continue, {})
 		end,
 	},
-	{
-		"mfussenegger/nvim-dap-python",
-		dependencies = {
-			"mfussenegger/nvim-dap",
-			"rcarriga/nvim-dap-ui",
-			"nvim-neotest/nvim-nio",
-		},
-		config = function()
-			local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
-			local dap = require("dap")
-
-			require("dap-python").setup(path)
-
-			vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint, {})
-			vim.keymap.set("n", "<Leader>dc", dap.continue, {})
-		end,
-	},
 }
